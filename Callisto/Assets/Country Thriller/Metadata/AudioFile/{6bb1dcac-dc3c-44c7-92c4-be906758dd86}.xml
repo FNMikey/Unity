@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{6bb1dcac-dc3c-44c7-92c4-be906758dd86}">
+        <property name="assetPath">
+            <value>country tense final level 1.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>112.5</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{02efb242-461a-40d4-8e41-1c799c6cade4}</destination>
+        </relationship>
+    </object>
+</objects>
