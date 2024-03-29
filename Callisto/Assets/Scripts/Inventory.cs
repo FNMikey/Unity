@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("OnTriggerEnter called with: " + other.gameObject.name);
-        if (other.gameObject.CompareTag("Item"))
+        if (other.gameObject.CompareTag("Miecz") || other.gameObject.CompareTag("Siekiera") ||other.gameObject.CompareTag("Kamien") || other.gameObject.CompareTag("Patyk") )
         {
             Item item = other.gameObject.GetComponent<Item>();
             if (item != null) 
