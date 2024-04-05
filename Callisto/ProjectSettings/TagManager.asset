@@ -6,6 +6,10 @@ TagManager:
   tags:
   - GameMusic
   - Item
+  - Miecz
+  - Siekiera
+  - Patyk
+  - Kamien
   layers:
   - Default
   - TransparentFX
