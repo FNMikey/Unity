@@ -9,6 +9,15 @@ public class DemoScript : MonoBehaviour
 
     public void PickupItem(int id)
     {
-        inventoryManager.AddItem(itemsToPickup[id]);
+        if (inventoryManager.AddItem(itemsToPickup[id]))
+        {
+            // AddItem returned true, so an item was successfully added
+            Debug.Log("ITEM ADDED");
+        }
+        else
+        {
+            // AddItem returned false, so the item was not added
+            Debug.Log("ITEM NOT ADDED");
+        }
     }
 }
