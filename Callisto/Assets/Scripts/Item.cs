@@ -1,31 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
-public class Item : MonoBehaviour
-{
-    public string itemName;
-    public int maxStack = 5;
-    public string iconPath;
+[CreateAssetMenu(menuName = "Scriptable object/Item")]
+public class Item : ScriptableObject {
 
-    void Start()
-    {
-       
-        if (!string.IsNullOrEmpty(iconPath))
-        {
-            Sprite icon = Resources.Load<Sprite>(iconPath);
-            if (icon != null)
-            {
-         
-                GetComponent<SpriteRenderer>().sprite = icon;
-            }
-            else
-            {
-                Debug.LogWarning($"Icon not found at path: {iconPath}");
-            }
-        }
-    }
+    [Header("Only gameplay")]
+    public TileBase tile;
+    public ItemType type;
+    public ActionType actionType;
+    public Vector2Int range = new Vector2Int(5, 4);
 
-    void Update()
-    {
-        
-    }
+    [Header("Only UI")]
+    public bool stackable = true;
+
+    [Header("Both")]
+    public Sprite image;
+}
+
+public enum ItemType {
+    BuildingBlock,
+    Tool
+}
+
+public enum ActionType {
+    Dig,
+    Build,
+    Cut, 
+
 }

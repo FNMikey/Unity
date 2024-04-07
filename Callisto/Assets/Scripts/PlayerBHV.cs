@@ -4,18 +4,21 @@ public class PlayerBHV : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float sprintMultiplier = 1.5f;
-    public Transform camTransform;
+    public Camera cam;
 
-    Rigidbody rb;
+
+    Rigidbody rigidBody;
     Vector3 movement;
     Vector3 mousePos;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        Transform camTransform = cam.transform;
+
+        rigidBody = GetComponent<Rigidbody>();
         if (camTransform == null)
         {
-            camTransform = Camera.main.transform;
+            camTransform = cam.transform;
         }
     }
 
@@ -23,13 +26,15 @@ public class PlayerBHV : MonoBehaviour
     {
         // Input
         float moveX = Input.GetAxisRaw("Horizontal");
+        //float moveZ = Input.GetAxisRaw("Vertical");
+
         float moveZ = Input.GetAxisRaw("Vertical");
 
         // Calculate movement vector
-        Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
+        Vector3 moveDirection = Quaternion.Euler(0, 45, 0) * new Vector3(moveX, 0f, moveZ);
 
         // Mouse position
-        Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray cameraRay = cam.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
 
@@ -39,7 +44,7 @@ public class PlayerBHV : MonoBehaviour
 
             // Determine the rotation towards the mouse position
             Quaternion newRotation = Quaternion.LookRotation(new Vector3(mousePos.x - transform.position.x, 0f, mousePos.z - transform.position.z));
-            rb.MoveRotation(newRotation);
+            rigidBody.MoveRotation(newRotation);
         }
 
         // Sprinting
@@ -52,7 +57,19 @@ public class PlayerBHV : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Movement
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        Movement();
+    }
+
+
+
+    void Movement() {
+
+        rigidBody.MovePosition(rigidBody.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(mousePos, 0.1f);
     }
 }
