@@ -7,7 +7,7 @@ public class PlayerBHV : MonoBehaviour
     public Camera cam;
 
 
-    Rigidbody rb;
+    Rigidbody rigidBody;
     Vector3 movement;
     Vector3 mousePos;
 
@@ -15,7 +15,7 @@ public class PlayerBHV : MonoBehaviour
     {
         Transform camTransform = cam.transform;
 
-        rb = GetComponent<Rigidbody>();
+        rigidBody = GetComponent<Rigidbody>();
         if (camTransform == null)
         {
             camTransform = cam.transform;
@@ -26,10 +26,12 @@ public class PlayerBHV : MonoBehaviour
     {
         // Input
         float moveX = Input.GetAxisRaw("Horizontal");
+        //float moveZ = Input.GetAxisRaw("Vertical");
+
         float moveZ = Input.GetAxisRaw("Vertical");
 
         // Calculate movement vector
-        Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
+        Vector3 moveDirection = Quaternion.Euler(0, 45, 0) * new Vector3(moveX, 0f, moveZ);
 
         // Mouse position
         Ray cameraRay = cam.ScreenPointToRay(Input.mousePosition);
@@ -42,7 +44,7 @@ public class PlayerBHV : MonoBehaviour
 
             // Determine the rotation towards the mouse position
             Quaternion newRotation = Quaternion.LookRotation(new Vector3(mousePos.x - transform.position.x, 0f, mousePos.z - transform.position.z));
-            rb.MoveRotation(newRotation);
+            rigidBody.MoveRotation(newRotation);
         }
 
         // Sprinting
@@ -55,8 +57,15 @@ public class PlayerBHV : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Movement
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        Movement();
+    }
+
+
+
+    void Movement() {
+
+        rigidBody.MovePosition(rigidBody.position + movement * moveSpeed * Time.fixedDeltaTime);
+
     }
 
     private void OnDrawGizmos()
