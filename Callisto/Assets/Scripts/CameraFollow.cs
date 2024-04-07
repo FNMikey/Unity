@@ -2,16 +2,13 @@
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;        // obiekt, za którym kamera ma podążać
-    //public float cameraRotation = 50f; // Nachylenie kamery względem gracza
-    //public float cameraYOffset = 5f; // odległość kamery w osi Y względem gracza
-    //public float cameraZOffset = -2f; // odległość kamery w osi Z względem gracza
+    public Transform target; // obiekt, za którym kamera ma podążać
 
     private Vector3 initialPosition;
 
     void Start()
     {
-        //initialPosition = transform.position;
+        initialPosition = transform.position;
     }
 
     void LateUpdate()

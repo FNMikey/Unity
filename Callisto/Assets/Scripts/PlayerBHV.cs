@@ -4,7 +4,8 @@ public class PlayerBHV : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float sprintMultiplier = 1.5f;
-    public Transform camTransform;
+    public Camera cam;
+
 
     Rigidbody rb;
     Vector3 movement;
@@ -12,10 +13,12 @@ public class PlayerBHV : MonoBehaviour
 
     void Start()
     {
+        Transform camTransform = cam.transform;
+
         rb = GetComponent<Rigidbody>();
         if (camTransform == null)
         {
-            camTransform = Camera.main.transform;
+            camTransform = cam.transform;
         }
     }
 
@@ -29,7 +32,7 @@ public class PlayerBHV : MonoBehaviour
         Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
 
         // Mouse position
-        Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray cameraRay = cam.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
 
@@ -54,5 +57,10 @@ public class PlayerBHV : MonoBehaviour
     {
         // Movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(mousePos, 0.1f);
     }
 }
