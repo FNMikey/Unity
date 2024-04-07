@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [Header("UI")]
+
     public Image image;
     public Text countText;
 

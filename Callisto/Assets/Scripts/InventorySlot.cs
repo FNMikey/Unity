@@ -7,8 +7,6 @@ using UnityEngine.EventSystems;
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
     public Image image;
-
-    // Drag and drop
     public void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0)
