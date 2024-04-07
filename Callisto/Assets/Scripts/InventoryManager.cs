@@ -9,7 +9,6 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryItemPrefab;
     public bool AddItem(Item item)
     {
-        // Check if any slot has the same item with count lower than max
         for (int i = 0; i < inventorySlots.Length; i++)
         {
             InventorySlot slot = inventorySlots[i];
@@ -23,8 +22,6 @@ public class InventoryManager : MonoBehaviour
                 return true;
             }
         }
-
-        // Find any empty slot
         for (int i = 0; i < inventorySlots.Length; i++)
         {
             InventorySlot slot = inventorySlots[i];
