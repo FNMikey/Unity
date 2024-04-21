@@ -5,40 +5,49 @@ using UnityEngine;
 public class DemoScript : MonoBehaviour
 {
     public InventoryManager inventoryManager;
+
     public Item[] itemsToPickup;
 
     public Item item;
+
+    private bool TryCraftingRecipe(Recipe recipe)
+    {
+        string details;
+        bool craft =
+            inventoryManager.CheckRecipeIngredients(recipe, out details);
+        if (craft)
+        {
+            Debug.Log("Mozna stworzyc kilofa");
+            return craft;
+        }
+        else
+        {
+            Debug.Log("Nie mozna stworzyc kilofa");
+            Debug.Log (details);
+            return craft;
+        }
+    }
 
     public void PickupItem(Item item)
     {
         if (item.itemID >= 0 && item.itemID < itemsToPickup.Length)
         {
-            if (inventoryManager.AddItem(itemsToPickup[item.itemID]))
+            if (!inventoryManager.IsInventoryFull())
             {
-                Debug.Log("ITEM ADDED");
+                if (inventoryManager.AddItem(itemsToPickup[item.itemID]))
+                {
+                    Debug.Log($"{item.itemName} zostal dodany");
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    Debug.Log($"{item.itemName} nie zostal dodany");
+                }
             }
             else
             {
-                Debug.Log("ITEM NOT ADDED");
-                Debug.Log("ITEM NOT ADDEasdasD");
-                Debug.Log(inventoryManager.PrintInventoryContents());
-                Recipe pickaxeRecipe = new Recipe();
-                pickaxeRecipe.ingredients = new List<Ingredient> {
-        new Ingredient { name="Stick", quantity = 2 },
-        new Ingredient { name="Rock", quantity = 3 }
-    };
-                string result = inventoryManager.CheckRecipeIngredients(pickaxeRecipe);
-                Debug.Log($"Zostanie stworzony kilof {result}");
-                Debug.Log(result);
-                Debug.Log(inventoryManager.RemoveItem("Rock", 3));
-                Debug.Log(inventoryManager.RemoveItem("Stick", 2));
- 
-
+                Debug.Log("Ekwipunek jest pelny");
             }
-        }
-        else
-        {
-            Debug.Log("Invalid itemID: " + item.itemID);
         }
     }
 
@@ -46,9 +55,7 @@ public class DemoScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
-            PickupItem(item);
-            gameObject.SetActive(false);
+            PickupItem (item);
         }
     }
 }
