@@ -58,15 +58,12 @@ InventoryItem
 
     public void OnDrop(PointerEventData eventData)
     {
-        InventoryItem droppedItem =
-            eventData.pointerDrag.GetComponent<InventoryItem>();
+        InventoryItem droppedItem =eventData.pointerDrag.GetComponent<InventoryItem>();
         if (droppedItem != null && droppedItem != this)
         {
             if (item.stackable && item.itemID == droppedItem.item.itemID)
             {
-                if (
-                    count < 4 
-                )
+                if (count < 4)
                 {
                     count += droppedItem.count; 
                     RefreshCount();

@@ -25,7 +25,7 @@ public class InventoryManager : MonoBehaviour
                     itemInSlot.count -= remainingQuantity;
                     if (itemInSlot.count == 0)
                     {
-                        Destroy(itemInSlot.gameObject); // Destroy the item if its count drops to zero
+                        Destroy(itemInSlot.gameObject);
                     }
                     itemInSlot.RefreshCount();
                     Debug.Log($"Usunieto {quantity} o nazwie '{itemName}'. W miejscu: {itemInSlot.count}");
@@ -34,7 +34,7 @@ public class InventoryManager : MonoBehaviour
                 else
                 {
                     remainingQuantity -= itemInSlot.count;
-                    Destroy(itemInSlot.gameObject); // Destroy the item as it's now depleted
+                    Destroy(itemInSlot.gameObject); 
                 }
             }
         }
@@ -93,7 +93,7 @@ public class InventoryManager : MonoBehaviour
         }
         return false;
     }
-
+    
     void SpawnNewItem(Item item, InventorySlot slot)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
@@ -145,7 +145,6 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        // Add summary information about required items from the recipe and check if they can be crafted
         inventoryContents +="\nPodsumowanie ilości wymaganych przedmiotów z przepisu:\n";
         foreach (Ingredient ingredient in recipe.ingredients)
         {
