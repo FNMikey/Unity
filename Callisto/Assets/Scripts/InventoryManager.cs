@@ -28,9 +28,7 @@ public class InventoryManager : MonoBehaviour
                         Destroy(itemInSlot.gameObject); // Destroy the item if its count drops to zero
                     }
                     itemInSlot.RefreshCount();
-                    Debug
-                        .Log($"Usunieto {quantity} o nazwie '{
-                            itemName}'. W miejscu: {itemInSlot.count}");
+                    Debug.Log($"Usunieto {quantity} o nazwie '{itemName}'. W miejscu: {itemInSlot.count}");
                     return true;
                 }
                 else
@@ -41,9 +39,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        Debug
-            .Log($"Nie usunieto pemnej ilosci '{itemName}'. Potrzeba jest: {
-                quantity}, Usunieto: {quantity - remainingQuantity}");
+        Debug.Log($"Nie usunieto pemnej ilosci '{itemName}'. Potrzeba jest: {quantity}, Usunieto: {quantity - remainingQuantity}");
         return false;
     }
 
@@ -135,8 +131,7 @@ public class InventoryManager : MonoBehaviour
                 if (itemInSlot.item.stackable)
                 {
                     inventoryContents +=
-                        $"Slot {i}: {itemInSlot.item.itemName}, Ilość: {
-                            itemInSlot.count}\n";
+                        $"Slot {i}: {itemInSlot.item.itemName}, Ilość: {itemInSlot.count}\n";
                 }
                 else
                 {
@@ -151,15 +146,13 @@ public class InventoryManager : MonoBehaviour
         }
 
         // Add summary information about required items from the recipe and check if they can be crafted
-        inventoryContents +=
-            "\nPodsumowanie ilości wymaganych przedmiotów z przepisu:\n";
+        inventoryContents +="\nPodsumowanie ilości wymaganych przedmiotów z przepisu:\n";
         foreach (Ingredient ingredient in recipe.ingredients)
         {
             int countNeeded = ingredient.quantity;
             int countAvailable = inventoryCounts[ingredient.name];
             inventoryContents +=
-                $"{ingredient.name}: Potrzeba {countNeeded}, Dostępne {
-                    countAvailable}\n";
+                $"{ingredient.name}: Potrzeba {countNeeded}, Dostępne {countAvailable}\n";
             if (countAvailable < countNeeded)
             {
                 canCraft = false;
