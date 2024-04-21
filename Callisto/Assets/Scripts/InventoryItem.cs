@@ -62,14 +62,17 @@ InventoryItem
             eventData.pointerDrag.GetComponent<InventoryItem>();
         if (droppedItem != null && droppedItem != this)
         {
-            if (
-                item.stackable &&
-                item.itemID == droppedItem.item.itemID &&
-                count < 4
-            )
+            if (item.stackable && item.itemID == droppedItem.item.itemID)
             {
-                count++;
-                RefreshCount();
+                if (
+                    count < 4 
+                )
+                {
+                    count += droppedItem.count; 
+                    RefreshCount();
+                    count = Mathf.Min(count, 4);
+                    Destroy(droppedItem.gameObject);
+                }
             }
             else
             {
