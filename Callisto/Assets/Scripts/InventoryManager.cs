@@ -94,7 +94,6 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    public 
     void SpawnNewItem(Item item, InventorySlot slot)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
@@ -102,19 +101,7 @@ public class InventoryManager : MonoBehaviour
         inventoryItem.InitialiseItem (item);
     }
 
-    public bool AddCraftedItem(Item item){
-         for (int i = 0; i < inventorySlots.Length; i++)
-        {
-            InventorySlot slot = inventorySlots[i];
-            InventoryItem itemInSlot =
-                slot.GetComponentInChildren<InventoryItem>();
-            if (itemInSlot == null)
-            {
-                SpawnNewItem (item, slot);
-                return true;
-            }
-        }
-    }
+    public bool
     CheckRecipeIngredients(Recipe recipe, out string inventoryContents)
     {
         Dictionary<string, int> inventoryCounts = new Dictionary<string, int>();
@@ -184,10 +171,8 @@ public class InventoryManager : MonoBehaviour
             foreach (Ingredient ingredient in recipe.ingredients)
             {
                 RemoveItem(ingredient.name, ingredient.quantity);
-                //AddCraftedItem("Pick");
             }
-            Debug.Log("Przedmiot zostal stworzony");
-            
+            Debug.Log("Przedmiot zostal stworzony aby item dzialal");
             return true;
         }
         else

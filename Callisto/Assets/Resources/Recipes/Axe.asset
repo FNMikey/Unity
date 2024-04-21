@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   ingredients:
-  - item: {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
+  - name: Rock
     quantity: 3
-  - item: {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
+  - name: Stick
     quantity: 2
-  result: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  result: {fileID: 11400000, guid: c7f6f7d269ade6b44aece394c0eeb208, type: 2}
