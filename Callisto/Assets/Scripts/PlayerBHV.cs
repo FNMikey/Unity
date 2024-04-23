@@ -24,13 +24,10 @@ public class PlayerBHV : MonoBehaviour
 
     void Update()
     {
-        // Input
         float moveX = Input.GetAxisRaw("Horizontal");
-        //float moveZ = Input.GetAxisRaw("Vertical");
-
         float moveZ = Input.GetAxisRaw("Vertical");
 
-        // Calculate movement vector
+        // Calculate movement vector (shifted for isometric view)
         Vector3 moveDirection = Quaternion.Euler(0, 45, 0) * new Vector3(moveX, 0f, moveZ);
 
         // Mouse position
@@ -68,6 +65,7 @@ public class PlayerBHV : MonoBehaviour
 
     }
 
+    //De-bugging
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(mousePos, 0.1f);
