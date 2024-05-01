@@ -14,6 +14,7 @@ TagManager:
   - Stick
   - Pick
   - Rock
+  - Chest
   layers:
   - Default
   - TransparentFX
