@@ -1,20 +1,27 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
+public class
+InventoryItem
+: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
 {
     public Image image;
+
     public Text countText;
 
-    [HideInInspector] public Item item;
-    [HideInInspector] public int count = 1;
+    [HideInInspector]
+    public Item item;
 
-    [HideInInspector] public Transform parentAfterDrag;
+    [HideInInspector]
+    public int count = 1;
+
+    [HideInInspector]
+    public Transform parentAfterDrag;
 
     private void Start()
     {
-        parentAfterDrag = transform.parent; 
+        parentAfterDrag = transform.parent;
     }
 
     public void InitialiseItem(Item newItem)
@@ -27,15 +34,14 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void RefreshCount()
     {
         countText.text = count.ToString();
-        bool textActive = count > 1;
-        countText.gameObject.SetActive(textActive);
+        countText.gameObject.SetActive(count > 1);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
-        transform.SetParent(transform.root); 
+        transform.SetParent(transform.root);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -46,27 +52,39 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
     {
         image.raycastTarget = true;
-        transform.SetParent(parentAfterDrag);
+        transform.SetParent (parentAfterDrag);
         transform.localPosition = Vector3.zero;
     }
 
     public void OnDrop(PointerEventData eventData)
     {
-        InventoryItem droppedItem = eventData.pointerDrag.GetComponent<InventoryItem>();
+        InventoryItem droppedItem =eventData.pointerDrag.GetComponent<InventoryItem>();
         if (droppedItem != null && droppedItem != this)
         {
-     
-            Item tempItem = item;
-            int tempCount = count;
+            if (item.stackable && item.itemID == droppedItem.item.itemID)
+            {
+                if (count < 5)
+                {
+                    count += droppedItem.count; 
+                    RefreshCount();
+                    count = Mathf.Min(count, 5);
+                    Destroy(droppedItem.gameObject);
+                }
+            }
+            else
+            {
+                Item tempItem = item;
+                int tempCount = count;
 
-            InitialiseItem(droppedItem.item);
-            droppedItem.InitialiseItem(tempItem);
+                InitialiseItem(droppedItem.item);
+                droppedItem.InitialiseItem (tempItem);
 
-            count = droppedItem.count;
-            droppedItem.count = tempCount;
+                count = droppedItem.count;
+                droppedItem.count = tempCount;
 
-            RefreshCount();
-            droppedItem.RefreshCount();
+                RefreshCount();
+                droppedItem.RefreshCount();
+            }
         }
     }
 }
