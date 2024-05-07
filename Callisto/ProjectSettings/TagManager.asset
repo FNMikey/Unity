@@ -11,6 +11,10 @@ TagManager:
   - Patyk
   - Kamien
   - Axe
+  - Stick
+  - Pick
+  - Rock
+  - Chest
   layers:
   - Default
   - TransparentFX
