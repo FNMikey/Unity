@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 3412507902699686464}
   - component: {fileID: 7827883116047923795}
   - component: {fileID: 3005895001058457647}
-  - component: {fileID: 1546645250009218365}
+  - component: {fileID: 6454624583460737531}
   m_Layer: 0
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,9 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6343643657033818722}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.3099997, y: 0.5, z: 6.39}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 14.192392, y: 14.192392, z: 14.192392}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6343643657033818722}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 289301614986012343, guid: 7dd9c120797c0574982c655346aca79b, type: 3}
 --- !u!23 &3412507902699686464
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -3846018093981099296, guid: ced720465f089c244bd5dbe63f3abf3d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -132,11 +132,11 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.05
+  m_Height: 0.05
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &1546645250009218365
+--- !u!114 &6454624583460737531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,7 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6343643657033818722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45cb433174e31044a9bb106256b13688, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ba74fff6c35ac24b9d1c3cc49a43e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: {fileID: 11400000, guid: c7f6f7d269ade6b44aece394c0eeb208, type: 2}
+  inventoryManager: {fileID: 0}
+  itemsToPickup:
+  - {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
+  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
