@@ -14,7 +14,7 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
         //Vector3 desiredPosition = target.position + new Vector3(0, cameraYOffset, cameraZOffset);
-        Vector3 desiredPosition = target.position + new Vector3(-5, 8, -5);
+        Vector3 desiredPosition = target.position + new Vector3(-50, 43, -50);
         transform.position = desiredPosition;
 
         //transform.rotation = Quaternion.Euler(cameraRotation, 0, 0);
