@@ -191,7 +191,6 @@ MonoBehaviour:
   countText: {fileID: 4447166496892191893}
   item: {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
   count: 1
-  itemName: {fileID: 0}
   parentAfterDrag: {fileID: 0}
 --- !u!1 &7095707837616357933
 GameObject:
