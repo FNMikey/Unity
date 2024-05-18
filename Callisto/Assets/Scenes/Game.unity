@@ -951,7 +951,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
 --- !u!1 &119309331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,6 +1363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1432,6 +1433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1524,6 +1526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2422,6 +2425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4018,7 +4022,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
 --- !u!1 &458105253 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 662091266336014466, guid: bd279c8096cf58649bef9c035a9106c3, type: 3}
@@ -4644,6 +4648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5048,7 +5053,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
 --- !u!1 &567511515
 GameObject:
   m_ObjectHideFlags: 0
@@ -5495,7 +5500,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
 --- !u!1001 &597447082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5800,6 +5805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -9028,8 +9034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
-  - {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  - {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
+  item: {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
 --- !u!1 &1006628330
 GameObject:
   m_ObjectHideFlags: 0
@@ -9201,6 +9207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -9902,7 +9909,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
 --- !u!1 &1084298828
 GameObject:
   m_ObjectHideFlags: 0
@@ -10508,6 +10515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -10816,6 +10824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -12112,6 +12121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -13223,7 +13233,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
 --- !u!1001 &1411137704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13286,6 +13296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -13312,8 +13323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
-  - {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  - {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
+  item: {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
 --- !u!1 &1422512299
 GameObject:
   m_ObjectHideFlags: 0
@@ -13413,7 +13424,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
 --- !u!1 &1457405103
 GameObject:
   m_ObjectHideFlags: 0
@@ -13656,6 +13667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1546645250009218365, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
+    - {fileID: 6454624583460737531, guid: 52dd0fc680c83c742ae84164c50a71a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -14232,7 +14244,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
 --- !u!1 &1537843400
 GameObject:
   m_ObjectHideFlags: 0
@@ -16228,7 +16240,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 6141ef7aa71cd0341b9a7f6e09936662, type: 2}
 --- !u!1 &1771886542
 GameObject:
   m_ObjectHideFlags: 0
@@ -16950,7 +16962,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1578403148}
   itemsToPickup:
   - {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
-  item: {fileID: 11400000, guid: a2e4e24f1c2969741ae6bfbb4cfa763b, type: 2}
+  item: {fileID: 11400000, guid: 3b3cd4db89fa51e48ab3b73e2f70287e, type: 2}
 --- !u!1 &1876573898
 GameObject:
   m_ObjectHideFlags: 0

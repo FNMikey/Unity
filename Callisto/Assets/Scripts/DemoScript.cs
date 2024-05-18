@@ -27,35 +27,36 @@ public class DemoScript : MonoBehaviour
             return craft;
         }
     }
-
     public void PickupItem(Item item)
-    {
-        if (item.itemID >= 0 && item.itemID < itemsToPickup.Length)
-        {
-            if (!inventoryManager.IsInventoryFull())
-            {
-                if (inventoryManager.AddItem(itemsToPickup[item.itemID]))
-                {
-                    Debug.Log($"{item.itemName} zostal dodany");
-                    gameObject.SetActive(false);
-                }
-                else
-                {
-                    Debug.Log($"{item.itemName} nie zostal dodany");
-                }
-            }
-            else
-            {
-                Debug.Log("Ekwipunek jest pelny");
-            }
+{
+    if (item == null) {
+        Debug.LogError("Item is null");
+        return;
+    }
+    if (inventoryManager == null) {
+        Debug.LogError("InventoryManager is not set");
+        return;
+    }
+    if (inventoryManager.IsInventoryFull()) {
+        Debug.Log("Inventory is full");
+    } else {
+        if (inventoryManager.AddItem(item)) {
+            Debug.Log($"{item.itemName} has been added");
+            gameObject.SetActive(false);
+        } else {
+            Debug.Log($"{item.itemName} has not been added");
         }
     }
+}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            PickupItem (item);
+private void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag("Player")) {
+        if (item != null) {
+            PickupItem(item);
+        } else {
+            Debug.LogError("Item not set for trigger");
         }
     }
+}
 }
