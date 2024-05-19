@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+
+
 public class PlayerBHV : MonoBehaviour
 {
     public float moveSpeed = 5f;
@@ -7,12 +9,24 @@ public class PlayerBHV : MonoBehaviour
     public float sprintMultiplier = 1.5f;
 
     public Camera cam;
+    public static string save;
 
     Rigidbody rigidBody;
 
     Vector3 movement;
 
     Vector3 mousePos;
+
+    public static string getSave()
+    {
+        return save;
+    }
+
+    public static void setSave(string name)
+    {
+        Debug.Log(name);
+        save = name;
+    }
 
     void Start()
     {

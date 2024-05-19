@@ -48,6 +48,14 @@ public class MusicController : MonoBehaviour
                 audioSource.clip = musicForScene1;
                 audioSource.Play();
             }
+        } else
+        {
+            if (audioSource.clip != musicForScene0And2)
+            {
+                // Play music for scene 1
+                audioSource.clip = musicForScene0And2;
+                audioSource.Play();
+            }
         }
 
         lastSceneIndex = sceneIndex; // update the last scene index
