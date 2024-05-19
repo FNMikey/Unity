@@ -2569,9 +2569,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187447186}
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -589.59937, y: -290.51898, z: 153.04262}
   m_LocalScale: {x: 33.460777, y: 3, z: 0.5}
+=======
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -4, y: 154, z: 2}
+  m_LocalScale: {x: 800, y: 300, z: 50}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 801446698}
@@ -9171,6 +9177,7 @@ MonoBehaviour:
 >>>>>>> Stashed changes
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -12207,6 +12214,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084298828}
   m_CullTransparentMesh: 1
+=======
+  target: {fileID: 1671227934}
+  cameraRotation: 70
+  cameraYOffset: 450
+  cameraZOffset: -200
+>>>>>>> Stashed changes
 --- !u!1 &1084737737
 GameObject:
   m_ObjectHideFlags: 0
@@ -23739,8 +23752,13 @@ Transform:
   m_GameObject: {fileID: 1671227929}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -3.26, y: 1.27, z: 0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_LocalPosition: {x: 109.3, y: 96.5, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1146556840}
@@ -23758,7 +23776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0e5c906f245f44ab1003d3395ce6ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 500
   sprintMultiplier: 1.5
   cam: {fileID: 24416517}
 --- !u!1 &1677807203
